@@ -42,7 +42,7 @@ done
 
 mask="($mask)|(There was an error|Failed to create paste)"
 
-response=$(curl \
+response=$(proxychains curl \
     --silent --show-error \
     $server/api/create \
     -F "content=<$content" \
